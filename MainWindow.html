@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Главное меню</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media href="Style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div class="profile-button-main">
+            <img class="profile-menu" src="img/Generic avatar.png">
+            <img class="menu-button" onclick="toggleMenu()" src="img/Align Justify.png">
+            </div>
+        <div class="menu-container" id="menu">  
+            <a>Главный экран</a>    
+            <a>Профиль</a>
+            <a>История</a>
+            <a href="Authorize.html">Выйти</a>
+        </div>
+        <div class="login-main">
+            <img class="logo-main" src="img/Servman_logo_converted-removebg-preview 1(1).png">
+            <div class="grid-main">
+                <a href="Serviceappointment.html" class="button">Запись на услугу</a>
+                <a class="button">Статус записи</a>
+                <a class="button">Мой профиль</a>
+                <a class="button">История</a>
+                <a class="button">Настройки</a>    
+                <a class="button">Поддержка</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</header>
+</body>
+</html>
