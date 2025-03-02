@@ -7,14 +7,6 @@
 }
 
 body {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    position: absolute;
-    overflow: hidden;
-=======
->>>>>>> 490744e (Оптимизировал код и выравнивание)
->>>>>>> d2e70522e7452200425cd28301be9cf17020b484
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
@@ -26,7 +18,6 @@ body {
 }
 
 .header {
-<<<<<<< HEAD
     height: auto;
     display: flex;
     flex-direction: column;
@@ -39,30 +30,6 @@ body {
 h2 {
     padding-bottom: 12px;
     font-size: 1.55vw;
-=======
-<<<<<<< HEAD
-    height: 100%;
-}
-
-h2 {
-    text-align: center;
-    padding-top: 180px;
-    padding-bottom: 16x;
-=======
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #FFFFFF;
-    color: black;
-}
-
-h2 {
-    padding-bottom: 16px;
->>>>>>> 490744e (Оптимизировал код и выравнивание)
-    font-size: 24pt;
->>>>>>> d2e70522e7452200425cd28301be9cf17020b484
 }
 
 .profile-button{
@@ -87,18 +54,8 @@ h2 {
 .profile {
     margin-left: -5px;
     margin-right: 0;
-<<<<<<< HEAD
     width: 55px;
     height: 55px;
-=======
-<<<<<<< HEAD
-    width: 60px;
-    height: 60px;
-=======
-    width: 45px;
-    height: 45px;
->>>>>>> 490744e (Оптимизировал код и выравнивание)
->>>>>>> d2e70522e7452200425cd28301be9cf17020b484
 }
 
 .menu{
@@ -108,37 +65,16 @@ h2 {
 }
 
 .login {
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
     font-size: 1.55vw;
-=======
-<<<<<<< HEAD
-    position: relative;
-    text-align: center;
-=======
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
->>>>>>> 490744e (Оптимизировал код и выравнивание)
-    font-size: 25pt;
->>>>>>> d2e70522e7452200425cd28301be9cf17020b484
     color: black;
     width: 41.6vw;
     height: 40vh;
     border-radius: 15px;
-<<<<<<< HEAD
     padding: 20px;
-=======
-<<<<<<< HEAD
-    padding: 10px;
-=======
-    padding: 20px;
->>>>>>> 490744e (Оптимизировал код и выравнивание)
->>>>>>> d2e70522e7452200425cd28301be9cf17020b484
     margin: auto;
     background: #b8b8b8;
     border: 1px solid #b8b8b8;
@@ -184,19 +120,8 @@ input:hover {
 }
 
 .links{
-<<<<<<< HEAD
     width: 572px;
     margin-bottom: 5px;
-=======
-<<<<<<< HEAD
-    color: black;
-    margin-left: 100px;
-    margin-right: 100px;
-=======
-    width: 572px;
-    margin-bottom: 5px;
->>>>>>> 490744e (Оптимизировал код и выравнивание)
->>>>>>> d2e70522e7452200425cd28301be9cf17020b484
     display: flex;
     justify-content: space-between;
     font-size: 0.75vw;
@@ -265,15 +190,7 @@ button:hover {
     justify-content: end;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-=======
-<<<<<<< HEAD
-    box-shadow: 5 5px 5px rgba(0, 0, 0, 0.3);
-=======
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
->>>>>>> 490744e (Оптимизировал код и выравнивание)
->>>>>>> d2e70522e7452200425cd28301be9cf17020b484
     z-index: 1;
     visibility: hidden;
     opacity: 0;
