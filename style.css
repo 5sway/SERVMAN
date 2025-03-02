@@ -1,10 +1,12 @@
+/************/
+/*Authorize*/
+/************/
+
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial;
 }
 
 body {
-    position: absolute;
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
@@ -16,20 +18,24 @@ body {
 }
 
 .header {
-    height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: black;
 }
 
 h2 {
-    text-align: center;
-    padding-top: 180px;
-    padding-bottom: 16x;
-    font-size: 24pt;
+    padding-bottom: 12px;
+    font-size: 1.55vw;
 }
 
 .profile-button{
     position: fixed;
     top: 10px;
-    left: 9px;
+    left: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,32 +45,36 @@ h2 {
     border-radius: 30px;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    flex-wrap: nowrap;
     filter: blur(1px);
     overflow: hidden;
 }
 
 .profile {
-    margin-left: -7px;
+    margin-left: -5px;
     margin-right: 0;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 }
 
 .menu{
     width: 35px;
     height: 35px;
-    margin-right: 10px;
+    margin-right: 10px; 
 }
 
 .login {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    text-align: center;
-    font-size: 25pt;
+    align-items: center;
+    font-size: 1.55vw;
     color: black;
-    width: 800px;
-    height: 400px;
+    width: 41.6vw;
+    height: 40vh;
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
     margin: auto;
     background: #b8b8b8;
     border: 1px solid #b8b8b8;
@@ -76,13 +86,14 @@ h2 {
 .logo{
     position: absolute;
     top: 0px;
-    right: -20px;
+    right: -15px;
     width: 150px;
     height: 130px;
     margin-left: 0;
 }
 
 h3{
+    font-size: 1.55vw;
     margin-bottom: 24px;
     text-align: center;
 
@@ -97,20 +108,23 @@ input {
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin: 15px 0;
+    margin: 10px 0;
     cursor: pointer;
-    font-size: 20pt;
+    font-size: 1.25vw;
     border: 1px solid #b8b8b8;
     background: #FFFFFF;
 }
 
+input:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
+}
+
 .links{
-    color: black;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 572px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
-    font-size: 12pt;
+    font-size: 0.75vw;
 }
 
 a {
@@ -123,9 +137,11 @@ a:hover {
 }
 
 button{
+    align-items: center;
+    justify-content: center;
     width: 266px;
     height: 60px;
-    font-size: 20pt;
+    font-size: 1.25vw;
     color: black;
     text-decoration: none;
     background: #FFFFFF;
@@ -133,17 +149,20 @@ button{
     border-radius: 10px;
     cursor: pointer;
     margin: auto;
-    padding: 16px;
 }
 
 button:hover {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
 }
 
+/************/
+/*MainWindow*/
+/************/
+
 .profile-button-main {
-    position: absolute;
+    position: fixed;
     top: 10px;
-    left: 9px;
+    left: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -153,25 +172,38 @@ button:hover {
     border-radius: 30px;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 2;
+    z-index: 100;
+    flex-wrap: nowrap;
 }
 
 .menu-container {
+    align-items: center;
+    font-size: 0.75vw;
     position: absolute;
-    top: 15px;
-    left: 9px;
-    height: 230px;
+    top: 20px;
+    left: 10px;
+    width: 130px;
+    height: 200px;
     background: #aaa;
     padding: 10px;
     border-radius: 25px;
     justify-content: end;
-    display: none;
+    display: flex;
     flex-direction: column;
-    box-shadow: 5 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.menu-container a {
+.menu-container.show-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.A {
+    cursor: pointer;
     background: white;
     padding: 10px;
     margin: 3px 0;
@@ -180,14 +212,31 @@ button:hover {
     text-decoration: none;
     color: black;
     display: block;
-    box-shadow: 5 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.ButtonMain{
+    background: white;
+    padding: 10px;
+    margin: 3px 0;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.A:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .profile-menu {
-    margin-left: -7px;
+    margin-left: -5px;
     margin-right: 0;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 }
 
 .menu-button {
@@ -197,18 +246,17 @@ button:hover {
     cursor: pointer;
 }
 
-.login-main {
+.main-window {
     text-align: center;
-    font-size: 25pt;
+    font-size: 1.55vw;
     color: black;
-    width: 1075px;
-    height: 742px;
+    width: 50vw;
+    height: 75vh;
     border-radius: 15px;
     padding: 10px;
     margin: auto;
     background: #b8b8b8;
     border: 1px solid #b8b8b8;
-    border-radius: 15px;
     box-shadow: 0px 5px 10px #b8b8b8;
 
 }
@@ -221,30 +269,386 @@ button:hover {
 
 .grid-main {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    box-shadow: 0 5 5 rgba(0, 0, 0, 0.5);
 }
 
 .button {
     background: #EEEEEE;
     padding: 15px;
     border-radius: 5px;
-    font-size: 16pt;
+    font-size: 1.5vw;
     cursor: pointer;
     text-decoration: none;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 220px;
+    height: 18vh;
     border: 1px solid #b8b8b8;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover {
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
 }
 
+@media (max-width: 1920px) {
+
+    .logo-main {
+        width: 207px;
+        height: 188px;
+    }
+
+    .button {
+        font-size: 1.5vw;
+        height: 21vh;
+    }
+
+    .profile-button-main {
+        width: 130px;
+        height: 43px;
+    }
+
+    .profile-menu {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .menu-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-container {
+        font-size: 0.75vw;
+        width: 130px;
+        height: 215px;
+    }
+
+    .A {
+        width: 110px;
+        height: 15px;
+    }
+
+    .ButtonMain {
+        width: 110px;
+        height: 15px;
+    }
+    
+    h2 {
+        font-size: 1.55vw;
+    }
+
+    h3 {
+        font-size: 1.55vw;
+    }
+
+    .links{
+        width: 572px;
+        font-size: 0.75vw;
+    }
+    
+    input {
+        font-size: 1.25vw;
+        width: 572px;
+        height: 50px;
+    }
+
+    .logo{
+        width: 150px;
+        height: 130px;
+    }
+
+    button{
+        font-size: 1.25vw;
+        width: 266px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1600px) {
+
+    .button {
+        height: 20vh;
+        font-size: 1.5vw;
+    }
+
+    .logo-main {
+        width: 172.5px;
+        height: 156.6px;
+    }
+
+    .profile-button-main {
+        width: 108.33px;
+        height: 35.83px;
+    }
+
+    .profile-button {
+        width: 108.33px;
+        height: 35.83px;
+    }
+
+    .profile-menu {
+        width: 45.8px;
+        height: 45.8px;
+    }
+
+    .profile-button {
+        width: 108.33px;
+        height: 35.83px;
+    }
+
+    .profile {
+        width: 108.33px;
+        height: 35.83px;
+    }
+
+    .profile {
+        width: 45.8px;
+        height: 45.8px;
+    }
+
+    .profile {
+        width: 45.8px;
+        height: 45.8px;
+    }
+
+    .menu {
+        width: 29.2px;
+        height: 29.2px;
+    }
+    
+    .menu-button {
+        width: 29.2px;
+        height: 29.2px;
+    }
+
+    .menu-container{
+        font-size: 0.75vw;
+        width: 108.3px;
+        height: 195px;
+    }
+
+    .A {
+        width: 91.6px;
+        height: 12.5px;
+    }
+    .ButtonMain {
+        width: 91.6px;
+        height: 12.5px;
+    }
+
+    h2 {
+        font-size: 1.5vw;
+    }
+
+    h3 {
+        font-size: 1.5vw;
+    }
+
+    .links{
+        width: 476.5px;
+        font-size: 0.70vw;
+    }
+
+    input {
+        font-size: 1.20vw;
+        width: 476.5px;
+        height: 50px;
+    }
+
+    .logo{
+        width: 125px;
+        height: 108.3px;
+    }
+
+    button{
+        font-size: 1.20vw;
+        width: 221.6px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .button {
+        height: 19vh;
+        font-size: 1.5vw;
+    }
+
+    .logo-main {
+        width: 155.25px;
+        height: 139.3px;
+    }
+
+    .profile-button-main {
+        width: 97.5px;
+        height: 32.25px;
+    }
+
+    .profile-menu {
+        width: 41.25px;
+        height: 41.25px;
+    }
+    
+    .menu-button {
+        width: 26.25px;
+        height: 26.25px;
+    }
+
+    .profile-button {
+        width: 97.5px;
+        height: 32.25px;
+    }
+
+    .profile {
+        width: 41.25px;
+        height: 41.25px;
+    }
+    
+    .menu {
+        width: 26.25px;
+        height: 26.25px;
+    }
+
+    .menu-container{
+        font-size: 0.75vw;
+        width: 97.5px;
+        height: 185px;
+    }
+
+    .A {
+        width: 82.5px;
+        height: 11.1px;
+    }
+
+    .ButtonMain {
+        width:  82.5px;
+        height: 11.1px;
+    }
+
+    h2 {
+        font-size: 1.45vw;
+    }
+
+    h3 {
+        font-size: 1.45vw;
+    }
+
+    .links{
+        width: 429px;
+        font-size: 0.65vw;
+    }
+
+    input {
+        font-size: 1.15vw;
+        width: 429px;
+        height: 50px;
+    }
+
+    .logo{
+        width: 112.5px;
+        height: 96.3px;
+    }
+
+    button{
+        font-size: 1.15vw;
+        width: 199.5px;
+        height: 44.5px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .logo-main {
+        width: 138px;
+        height: 125.3px;
+    }
+    .button {
+        font-size: 1.5vw;
+        height: 18.5vh;
+    }
+
+    .profile-button-main {
+        width: 86.67px;
+        height: 28.67px;
+    }
+
+    .profile-menu {
+        width: 36.7px;
+        height: 36.7px;
+    }
+    
+    .menu-button {
+        width: 23.3px;
+        height: 23.3px;
+    }
+
+    .profile-button {
+        width: 86.67px;
+        height: 28.67px;
+    }
+
+    .profile {
+        width: 36.7px;
+        height: 36.7px;
+    }
+    
+    .menu {
+        width: 23.3px;
+        height: 23.3px;
+    }
+
+    .menu-container{
+        font-size: 0.75vw;
+        width: 86.7px;
+        height: 175px;
+    }
+
+    .A {
+        width: 73.4px;
+        height: 10px;
+    }
+
+    .ButtonMain {
+        width: 73.4px;
+        height: 10px;
+    }
+
+    h2 {
+        font-size: 1.4vw;
+    }
+
+    h3 {
+        font-size: 1.4vw;
+    }
+
+    .links{
+        width: 381.5px;
+        font-size: 0.60vw;
+    }
+
+    input {
+        font-size: 1.10vw;
+        width: 381.5px;
+        height: 50px;
+    }
+
+    .logo{
+        width: 100px;
+        height: 86.7px;
+    }
+
+    button{
+        font-size: 1.1vw;
+        width: 177.4px;
+        height: 40px;
+    }
+}
+
+/************/
+/*ServicePppointment*/
+/************/
 
