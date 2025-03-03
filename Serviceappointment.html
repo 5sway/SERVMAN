@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Запись на обслуживание</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+</head>
+<body>
+    <div class="profile-button-main">
+        <img class="profile-menu" src="img/Generic avatar.png">
+        <img class="menu-button" onclick="toggleMenu()" src="img/Align Justify.png">
+    </div>
+    <div class="menu-container" id="menu">  
+        <a class="A" href="MainWindow.html">Главный экран</a>
+        <a class="A">Профиль</a>
+        <a class="A">История</a>
+        <a class="A" href="Authorize.html">Выйти</a>
+    </div>
+    <header class="header">      
+            <div class="Serviceappointment">
+                <img class="logo-Service" src="img/Servman_logo_converted-removebg-preview 1.png">
+                <h3>Заполните форму записи на услугу:</h3>
+                <input type="text" placeholder="ФИО">
+                <input type="text" placeholder="Марка автомобиля">
+                <input type="text" placeholder="VIN-номер">
+                <input type="date" id="date" required>
+                <input type="time" id="time" required>
+                <input type="text" placeholder="Описать проблему">
+                <select id="master" class="form-field" required>
+                    <option value="">Выберите мастера</option>
+                    <option value="1">Иванов Алексей</option>
+                    <option value="2">Петров Дмитрий</option>
+                    <option value="3">Сидорова Мария</option>
+                </select>
+                <a href="MainWindow.html"><button>Записаться</button></a>
+            </div>
+    </header>
+    <script>
+        function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show-menu"); }
+    </script>
+</body>
+</html>
