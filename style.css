@@ -326,11 +326,11 @@ button:hover {
     margin-left: 0;
 }
 
-option {
+select option {
     padding: 20px;
     border-radius: 0px;
-    background: #ffffff !important;
-    color: #000000 !important;
+    background-color: #ffffff;
+    color: #000000;
     padding: 12px;
 }
 
