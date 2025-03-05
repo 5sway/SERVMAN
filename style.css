@@ -1,9 +1,6 @@
-/************/
-/*Authorize*/
-/************/
-
 * {
     font-family: 'Roboto', Arial;
+    transition: background 1s ease, color 0.01s ease;
 }
 
 body {
@@ -104,10 +101,9 @@ h2, h3 {
 .logo{
     position: absolute;
     top: 10px;
-    right: 0%;
-    width: 90%;
-    max-width: 100px;
-    height: 80px;
+    right: -20px;
+    width: 150px;
+    height: 110px;
     margin-left: 0;
 }
 
@@ -134,7 +130,7 @@ input:hover {
 
 .links{
     width: 80%;
-    max-width: 572px;
+    max-width: 522px;
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
@@ -172,16 +168,16 @@ button:hover {
 
 .menu-container {
     align-items: center;
-    font-size: 0.75vw;
+    font-size: 12px;
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 10px;
-    width: 90%;
     min-width: 120px;
+    width: 120px;
     max-width: 120px;
-    height: 90%;
-    min-height: 200px;
-    max-height: 200px;
+    min-height: 220px;
+    height: 220px;
+    max-height: 220px;
     background: #aaa;
     padding: 10px;
     border-radius: 25px;
@@ -295,4 +291,12 @@ select option {
 
 select:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
+}
+
+.theme-button img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
 }

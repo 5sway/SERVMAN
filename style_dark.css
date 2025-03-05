@@ -1,0 +1,302 @@
+* {
+    font-family: 'Roboto', Arial;
+    transition: background 1s ease, color 0.01s ease;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEEEEE;
+    margin: 0;
+}
+
+.header {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #212121;
+    color: #EEEEEE;
+}
+
+h2, h3 {
+    font-size: 25px;
+}
+
+.profile-button{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    max-width: 120px;
+    height: 43px;
+    background-color: #3b3b3b;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    flex-wrap: nowrap;
+}
+
+.profile-button .profile {
+    filter: blur(1px);
+    margin-left: -5px;
+    margin-right: 0;
+    width: 55px;
+    height: 55px;
+}
+
+.profile-button .menu{
+    filter: blur(1px);
+    width: 35px;
+    height: 35px;
+    margin-right: 10px; 
+}
+
+.profile-menu {
+    margin-left: -5px;
+    margin-right: 0;
+    width: 55px;
+    height: 55px;
+}
+
+.menu-button {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.login, .main-window, .Serviceappointment {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    font-size: 25px;
+    color: #EEEEEE;
+    width: 90%;
+    min-width: 700px;
+    max-width: 1200px;
+    height: 50%;
+    max-height: 600px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: auto;
+    background: #5D5C5C;
+    border: 1px solid #5D5C5C;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px #5D5C5C;
+
+}
+
+.logo{
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    width: 150px;
+    height: 110px;
+    margin-left: 0;
+}
+
+input {
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    height: 50px;
+    color: #EEEEEE;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #5D5C5C;
+    background: #1e1e1e;
+}
+
+input:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
+}
+
+.links{
+    width: 80%;
+    max-width: 522px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+button{
+    align-items: center;
+    justify-content: center;
+    width: 266px;
+    max-width: 266px;
+    height: 60px;
+    font-size: 20px;
+    color: #EEEEEE;
+    text-decoration: none;
+    background: #1e1e1e;
+    border: 1px solid #5D5C5C;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
+}
+
+.menu-container {
+    align-items: center;
+    font-size: 12px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    min-width: 120px;
+    width: 120px;
+    max-width: 120px;
+    min-height: 220px;
+    height: 220px;
+    max-height: 220px;
+    background: #3b3b3b;
+    padding: 10px;
+    border-radius: 25px;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-container.show-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.A {
+    max-width: 110px;
+    width: 90%;
+    cursor: pointer;
+    background: #7e7e7e;
+    padding: 10px;
+    margin: 3px 0;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #EEEEEE;
+    display: block;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.ButtonMain{
+    max-width: 110px;
+    width: 90%;
+    background: #7e7e7e;
+    padding: 10px;
+    margin: 3px 0;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #EEEEEE;
+    display: block;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.A:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo-main {
+    max-height: 207px;
+    max-height: 188px;
+    margin-bottom: 27px;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 100%;
+}
+
+.button {
+    background: #343434;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 140px;
+    max-height: 220px;
+    border: 1px solid #5D5C5C;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
+}
+
+select option {
+    padding: 20px;
+    border-radius: 0px;
+    background-color: #1e1e1e;
+    color: #EEEEEE;
+    padding: 12px;
+}
+
+.form-field {
+    border-radius: 15px;
+    max-width: 532px;
+    width: 90%;
+    max-height: 60px;
+    color: #EEEEEE;
+    padding: 12.5px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #5D5C5C;
+    background: #1e1e1e;
+    box-sizing: border-box;
+}
+
+select:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(0, 0, 0, 0.3)
+}
+
+.theme-button img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+}
